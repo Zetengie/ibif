@@ -1,0 +1,80 @@
+*, *::before, *::after{
+    box-sizing: border-box; 
+}
+
+*{
+    margin: 0; 
+    padding: 0; 
+}
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+    font-family: "Poppins", sans-serif;
+}
+
+input, button, textarea, select{
+    font: inherit; 
+}
+
+.container {
+    // width 1280
+    max-width: 1328px;
+    padding: 0 32px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media(max-width: 400px) {
+        padding: 0 16px;
+    }
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 140%;
+
+    &--black {
+        color: $color-text;
+    }
+
+    &--white {
+        color: #FFF;
+    }
+
+    @media(max-width: 1050px) {
+        font-size: 24px;
+    }
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+
+    &--white {
+        color: #FFF;
+    }
+
+    &--black {
+        color: $color-text
+    }
+
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 100px;
+        height: 8px;
+        border-radius: 8px;
+        background-color: $color-highlight;
+        margin-right: 20px;
+        transform: translateY(-3px)
+    }
+}
